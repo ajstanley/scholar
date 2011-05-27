@@ -1,0 +1,8 @@
+; $Id$ 
+name = CYCT Solr Config
+description = Implementation of Islandora Solr Search customized for CYCT
+dependencies[] = islandora_solr_search
+description = Customizes Islandora solr search
+package = Fedora Repository
+version = 6.1dev
+core = 6.x
