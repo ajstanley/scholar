@@ -16,8 +16,8 @@ function scholar_enable() {
     drupal_set_message('Added ir: to the set of allowed pidnamespaces.', 'info');
   }
 
-  if ( !Fedora_Item::fedora_item_exists('ir:collection')) {
-    $new_collection_foxml = Fedora_Item::create_object_FOXML('ir:collection', 'A', 'Institutional Repository Collection');
+  if ( !Fedora_Item::fedora_item_exists('cyct:collection')) {
+    $new_collection_foxml = Fedora_Item::create_object_FOXML('cyct:collection', 'A', 'CYCT Collection');
     $collection_item = Fedora_Item::ingest_from_FOXML($new_collection_foxml);
     if (!empty($collection_item)) {
       $collection_item->add_datastream_from_url( $base_url.'/'.drupal_get_path('module', 'fedora_repository').'/collection_policies/REFWORKS_COLLECTION_POLICY.xml', 'COLLECTION_POLICY', 'Collection Policy', 'text/xml', 'E');
